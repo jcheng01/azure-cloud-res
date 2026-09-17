@@ -13,3 +13,8 @@ Thumbs.db
 # Env / secrets
 .env
 .env.*
+
+# Terraform
+*.tfstate*
+.terraform/
+tfplan
