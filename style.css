@@ -1,0 +1,85 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-accent: #2b6cb0;
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--color-muted);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.25rem;
+}
+
+.meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-list li {
+  background: #eef2f7;
+  color: var(--color-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+#counter {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 3rem;
+}
