@@ -18,3 +18,7 @@ Thumbs.db
 *.tfstate*
 .terraform/
 tfplan
+
+# Azure Functions
+function/node_modules/
+function/local.settings.json
