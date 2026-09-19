@@ -40,6 +40,16 @@ h1 {
   color: var(--color-muted);
 }
 
+.contact {
+  margin: 0.5rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.contact a {
+  color: var(--color-accent);
+}
+
 section {
   margin-bottom: 2rem;
 }
@@ -48,6 +58,23 @@ h2 {
   font-size: 1.25rem;
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1rem 0 0.25rem;
+}
+
+article + article {
+  margin-top: 1.5rem;
+}
+
+.project-links {
+  font-size: 0.9rem;
+}
+
+.project-links a {
+  color: var(--color-accent);
 }
 
 .meta {

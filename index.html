@@ -10,38 +10,158 @@
 <body>
   <header>
     <h1>Justin Cheng</h1>
-    <p class="subtitle">Cloud &amp; DevOps Engineer (in progress)</p>
+    <p class="subtitle">System Administrator | Azure Cloud &amp; Infrastructure</p>
+    <p class="contact">
+      New York, NY &nbsp;|&nbsp; 347-323-4853 &nbsp;|&nbsp;
+      <a href="mailto:chengjustin24@gmail.com">chengjustin24@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/chengjustin0222" target="_blank" rel="noopener">linkedin.com/in/chengjustin0222</a>
+    </p>
   </header>
 
   <main>
     <section id="about">
       <h2>About</h2>
       <p>
-        I'm transitioning into cloud and DevOps engineering. This site is my
-        Cloud Resume Challenge project, built on Azure with Terraform and
-        GitHub Actions.
+        System administrator specializing in Microsoft 365, identity, and Azure
+        cloud infrastructure. Azure Administrator Associate (AZ-104) certified,
+        with hands-on experience provisioning cloud infrastructure via
+        Terraform and automating deployments with GitHub Actions.
       </p>
     </section>
 
     <section id="experience">
       <h2>Experience</h2>
+
       <article>
-        <h3>Job Title — Company Name</h3>
-        <p class="meta">Month Year – Present</p>
+        <h3>System Administrator — SOLV Energy</h3>
+        <p class="meta">New Jersey, NJ · February 2026 – Present</p>
         <ul>
-          <li>Replace with a real accomplishment.</li>
-          <li>Replace with a real accomplishment.</li>
+          <li>Administer Microsoft 365 and identity services for 500+ users across Exchange Online, Teams, OneDrive, Microsoft Entra ID, Intune, and enterprise MFA while meeting Freshservice SLAs.</li>
+          <li>Troubleshoot Tier 1 and Tier 2 Windows, SSO, permissions, DNS/DHCP, and application-access issues; document root causes and preventive actions.</li>
+          <li>Manage Exchange Online mail flow, mailbox permissions, retention, and email security, and support Intune enrollment, compliance policies, configuration profiles, and app deployments.</li>
+          <li>Administer Azure RBAC and Entra ID group-based access to enforce least-privilege permissions across cloud resources.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>IT Admin Assistant — KITH Retail LLC</h3>
+        <p class="meta">New York, NY · May 2024 – January 2026</p>
+        <ul>
+          <li>Automated employee onboarding through Freshservice API-integrated workflows and developed PowerShell scripts to create Active Directory accounts and apply Group Policy across organizational units.</li>
+          <li>Triaged and resolved cross-team Freshservice incidents, documenting root causes and escalation details to support continuity and faster resolution.</li>
+          <li>Supported migration of 80+ Apple devices to Kandji, maintaining enrollment accuracy while minimizing downtime and data loss.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>IT Help Desk — Syracuse University</h3>
+        <p class="meta">Syracuse, NY · September 2022 – May 2024 (Seasonal)</p>
+        <ul>
+          <li>Delivered Tier 1 software and hardware support for 50+ users, tracked incidents in Jira, and explained technical root causes and preventive steps in clear language.</li>
+          <li>Installed and configured desktops, peripherals, and A/V equipment across 30+ teaching stations and onboarded staff to university technology workflows.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Cloud &amp; Infrastructure Projects</h2>
+
+      <article class="project">
+        <h3>Cloud Resume Challenge</h3>
+        <ul class="skills-list">
+          <li>Azure</li>
+          <li>Terraform</li>
+          <li>GitHub Actions</li>
+          <li>Cosmos DB</li>
+        </ul>
+        <ul>
+          <li>Built this résumé site end-to-end on Azure: a Static Web App front end, a serverless Function API, and a Cosmos DB-backed visitor counter, authenticated via managed identity with no stored secrets.</li>
+          <li>Provisioned all infrastructure with Terraform using a remote state backend, and automated deployments with GitHub Actions using OIDC (no long-lived Azure credentials in GitHub).</li>
+        </ul>
+        <p class="project-links">
+          <a href="https://github.com/jcheng01/azure-cloud-res" target="_blank" rel="noopener">GitHub repo</a>
+          &nbsp;|&nbsp;
+          <a href="https://nice-sky-01a7b960f.4.azurestaticapps.net" target="_blank" rel="noopener">Live site</a>
+          <span class="meta">(you're on it)</span>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Azure CloudOps Infrastructure Portfolio</h3>
+        <ul class="skills-list">
+          <li>Azure</li>
+          <li>Terraform</li>
+          <li>GitHub Actions</li>
+        </ul>
+        <ul>
+          <li>Designed and deployed a public Azure cloud operations dashboard using Azure Resource Graph to visualize cloud resources and operational health.</li>
+          <li>Provisioned repeatable Azure infrastructure with Terraform, including segmented VNets, subnets, NSGs, storage resources, monitoring, and governance controls.</li>
+          <li>Implemented GitHub Actions CI/CD for automated Azure deployments and applied managed identities, Azure RBAC, tagging, policy, and cost controls.</li>
+        </ul>
+        <p class="project-links">
+          <a href="https://github.com/jcheng01/azure-cloud-ops" target="_blank" rel="noopener">GitHub repo</a>
+          &nbsp;|&nbsp;
+          <a href="https://wonderful-bush-0b51e040f.6.azurestaticapps.net" target="_blank" rel="noopener">Live dashboard</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Windows Server 2022 Virtual Lab</h3>
+        <p class="meta">Spring/Summer 2025</p>
+        <ul>
+          <li>Built and administered a Windows Server environment in VMware, joined a Windows 11 Enterprise client, and configured remote administration.</li>
+          <li>Configured Active Directory users and organizational units, linked Group Policy Objects, and managed TCP/IP and domain settings.</li>
         </ul>
       </article>
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <h2>Certifications &amp; Technical Skills</h2>
+
+      <h3>Certifications</h3>
+      <ul>
+        <li>Microsoft Certified: Azure Administrator Associate (AZ-104)</li>
+        <li>CompTIA Network+</li>
+        <li>CompTIA A+</li>
+        <li>AWS Solutions Architect – Associate (in progress)</li>
+      </ul>
+
+      <h3>Cloud &amp; Infrastructure</h3>
       <ul class="skills-list">
         <li>Azure</li>
+        <li>Microsoft Entra ID</li>
+        <li>Azure RBAC</li>
+        <li>Azure Monitor</li>
         <li>Terraform</li>
         <li>GitHub Actions</li>
+        <li>Windows Server</li>
+        <li>Active Directory</li>
+        <li>Group Policy</li>
+        <li>DNS</li>
+        <li>DHCP</li>
+        <li>TCP/IP</li>
       </ul>
+
+      <h3>Administration &amp; Tools</h3>
+      <ul class="skills-list">
+        <li>Microsoft 365</li>
+        <li>Exchange Online</li>
+        <li>Intune</li>
+        <li>PowerShell</li>
+        <li>VMware</li>
+        <li>Freshservice</li>
+        <li>Jira</li>
+        <li>Kandji</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <article>
+        <h3>Syracuse University — iSchool of Information Studies</h3>
+        <p class="meta">Syracuse, NY</p>
+        <p>B.S., Information Management &amp; Technology | GPA: 3.71</p>
+      </article>
     </section>
 
     <section id="counter">
