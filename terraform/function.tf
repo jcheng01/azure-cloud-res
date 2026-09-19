@@ -45,7 +45,10 @@ resource "azurerm_linux_function_app" "main" {
 
   site_config {
     application_stack {
-      node_version = "24"
+      # Node 24 returned persistent 503s on this Consumption plan despite
+      # being listed as supported — reverted to 22 (still current LTS,
+      # not EOL like 20) after a restart didn't resolve it.
+      node_version = "22"
     }
 
     # Allows the browser (running on the Static Web App's origin) to call
