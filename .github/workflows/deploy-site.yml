@@ -1,0 +1,53 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "index.html"
+      - "style.css"
+      - "script.js"
+      - ".github/workflows/deploy-site.yml"
+  workflow_dispatch: # allows deploying manually from the Actions tab
+
+permissions:
+  id-token: write # required to fetch the OIDC token for Azure login
+  contents: read
+
+env:
+  RESOURCE_GROUP: rg-cloud-resume
+  STATIC_WEB_APP: swa-cloud-resume
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure Login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      # Deploy from a folder containing only the site files. Pointing the
+      # SWA CLI at the repo root would sweep in terraform/, function/, and
+      # .git — and its cleanup step crashes on git's read-only objects.
+      - name: Stage site files
+        run: |
+          mkdir -p dist
+          cp index.html style.css script.js dist/
+          ls -la dist
+
+      # The deployment token is fetched and used within this single step, so
+      # it never lands in GitHub's secret/output storage — the OIDC login
+      # above is the only credential, and it's short-lived.
+      - name: Deploy to Static Web App
+        run: |
+          SWA_CLI_DEPLOYMENT_TOKEN=$(az staticwebapp secrets list \
+            --name "$STATIC_WEB_APP" \
+            --resource-group "$RESOURCE_GROUP" \
+            --query "properties.apiKey" -o tsv)
+          export SWA_CLI_DEPLOYMENT_TOKEN
+          npx -y @azure/static-web-apps-cli@latest deploy ./dist --env production
