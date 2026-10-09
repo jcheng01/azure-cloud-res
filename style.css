@@ -77,6 +77,17 @@ article + article {
   color: var(--color-accent);
 }
 
+.cert-list a {
+  color: var(--color-accent);
+}
+
+.cert-list .verify {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+  white-space: nowrap;
+}
+
 .meta {
   color: var(--color-muted);
   font-size: 0.9rem;

@@ -23,3 +23,6 @@ tfplan
 # Azure Functions
 function/node_modules/
 function/local.settings.json
+
+# SWA CLI deployment packages
+*-app.zip
